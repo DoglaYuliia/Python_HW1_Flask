@@ -18,12 +18,11 @@ def fake_data(number):
     generate_data = str()
     number = int(number)
     for i in range(number):
-        generate_data += f'<p> {fake.first_name()} {fake.email()} </p>'
+        generate_data += f'<p> {fake.first_name()} {fake.email()}'
     return generate_data
 
 
 @app.route('/mean/')
-# output the average values of the columns of the csv file
 def mean():
     return read_csv('hw.csv')
 
